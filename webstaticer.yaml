@@ -1,0 +1,7 @@
+server:
+  host: localhost
+  port: 0
+
+webroot:
+  dir: .
+  file: index.html
