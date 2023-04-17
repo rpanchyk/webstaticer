@@ -9,14 +9,14 @@ import (
 func main() {
 	log.Println("WebStaticer HTTP Server")
 
-	argsService := services.NewArgsService()
-	args, err := argsService.Parse(os.Args[1:])
+	argsService := services.NewArgsService(os.Args[1:])
+	args, err := argsService.Parse()
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	configService := services.NewConfigService()
-	config, err := configService.Parse(args.ConfigFile)
+	configService := services.NewConfigService(args.ConfigFile)
+	config, err := configService.Parse()
 	if err != nil {
 		log.Fatal(err)
 	}

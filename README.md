@@ -1,5 +1,5 @@
 # WebStaticer
-Small HTTP Server aimed to serve static files.
+HTTP Server to serve static files.
 
 ![alt](docs/webstaticer.png)
 
