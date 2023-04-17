@@ -68,7 +68,7 @@ func (s *ConfigService) normalizeServerPort(port string) (*string, error) {
 	}
 
 	_, err := strconv.ParseInt(port, 10, 64)
-	if err == nil {
+	if err != nil {
 		return nil, err
 	}
 	return &port, nil
